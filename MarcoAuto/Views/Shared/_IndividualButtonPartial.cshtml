@@ -1,0 +1,12 @@
+﻿@model MarcoAuto.Models.IndividualButtonPartial
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<a type="button" class="btn btn-sm @Model.ButtonType"
+   href="@Url.Action(Model.Action)@Model.ActionParameters">
+    <span class="glyphicon @Model.Glyph">
+
+    </span>
+    <span class="sr-only">@Model.Text</span>
+</a>

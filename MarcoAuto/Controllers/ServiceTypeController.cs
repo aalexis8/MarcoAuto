@@ -17,7 +17,7 @@ namespace MarcoAuto.Controllers
             _context = context;
         }
 
-        // GET: ServiceTyoes
+        // GET: ServiceTypes
         public IActionResult Index()
         {
             return View(_context.ServiceTypes.ToList());
@@ -30,6 +30,8 @@ namespace MarcoAuto.Controllers
         }
 
         // POST : ServiceTypes/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ServiceType serviceType)
         {
             if (ModelState.IsValid)
